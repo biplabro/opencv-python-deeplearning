@@ -24,11 +24,11 @@ cv2.destroyAllWindows()
 
 #store image
 cv2.imwrite('Grayscale1.jpg', gray_image)
-
+"""
 #Method-2
 #========
 
-#load image as grayscale
+#load image as grayscale, arg 0 stand for -loas ad B/W
 img = cv2.imread('p02.jpg',0)
 
 #show image
@@ -38,3 +38,4 @@ cv2.destroyAllWindows()
 
 #store image
 cv2.imwrite('Grayscale2.jpg', gray_image)
+"""
