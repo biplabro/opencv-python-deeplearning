@@ -25,7 +25,7 @@ print ('gray_image_shape', gray_img.shape)
 print ('(x,y)th pixel intensity or grayscale image', gray_img[11, 75])
 cv2.imshow('grayscale_image', gray_img)
 cv2.waitKey(0)
-cv2.imwrite('grayscale_image.jpg', gray_img)
+cv2.imwrite('./Results/grayscale_image.jpg', gray_img)
 
 # image manipulation in HSV color space
 # channel H: 0 - 180, S: 0 - 255, V: 0 - 255
@@ -46,9 +46,9 @@ cv2.waitKey(0)
 #cv2.destroyAllWindows()
 
 # save the output images
-cv2.imwrite('Hue channel.jpg', hsv_image[:, :, 0])
-cv2.imwrite('Saturation channel.jpg', hsv_image[:, :, 1])
-cv2.imwrite('Value channel.jpg', hsv_image[:, :, 2])
+cv2.imwrite('./Results/Hue channel.jpg', hsv_image[:, :, 0])
+cv2.imwrite('./Results/Saturation channel.jpg', hsv_image[:, :, 1])
+cv2.imwrite('./Results/Value channel.jpg', hsv_image[:, :, 2])
 
 # OpenCV's 'split' function splites the image into each color index
 B, G, R = cv2.split(image)
@@ -57,24 +57,23 @@ B, G, R = cv2.split(image)
 cv2.imshow("Red", R)
 cv2.imshow("Green", G)
 cv2.imshow("Blue", B)
+cv2.waitKey(0)
 
 # save BGR channel of images
-cv2.imwrite("Red.jpg", R)
-cv2.imwrite("Green.jpg", G)
-cv2.imwrite("Blue.jpg", B)
-
-cv2.waitKey(0)
-#cv2.destroyAllWindows()
+cv2.imwrite("./Results/Red.jpg", R)
+cv2.imwrite("./Results/Green.jpg", G)
+cv2.imwrite("./Results/Blue.jpg", B)
 
 # Let's re-make the original image, 
 merged = cv2.merge([B, G, R]) 
 cv2.imshow("Merged", merged) 
-cv2.imwrite("Merged.jpg", merged) 
+cv2.waitKey(0)
+cv2.imwrite("./Results/Merged.jpg", merged) 
 
 # Let's amplify the red color
 merged = cv2.merge([B, G, R+66])
 cv2.imshow("Merged with Red Amplified", merged) 
-cv2.imwrite("Merged with Red Amplified.jpg", merged) 
+cv2.imwrite("./Results/Merged with Red Amplified.jpg", merged) 
 
 cv2.waitKey(0)
 #cv2.destroyAllWindows()
@@ -88,12 +87,12 @@ zeros = np.zeros(image.shape[:2], dtype = "uint8")
 cv2.imshow("Red-Zero", cv2.merge([zeros, zeros, R]))
 cv2.imshow("Green-Zero", cv2.merge([zeros, G, zeros]))
 cv2.imshow("Blue-Zero", cv2.merge([B, zeros, zeros]))
-
-cv2.imwrite("Red-Zero.jpg", cv2.merge([zeros, zeros, R]))
-cv2.imwrite("Green-Zero.jpg", cv2.merge([zeros, G, zeros]))
-cv2.imwrite("Blue-Zero.jpg", cv2.merge([B, zeros, zeros]))
-
 cv2.waitKey(0)
+
+cv2.imwrite("./Results/Red-Zero.jpg", cv2.merge([zeros, zeros, R]))
+cv2.imwrite("./Results/Green-Zero.jpg", cv2.merge([zeros, G, zeros]))
+cv2.imwrite("./Results/Blue-Zero.jpg", cv2.merge([B, zeros, zeros]))
+
 cv2.destroyAllWindows()
 image.shape[:2]
 
