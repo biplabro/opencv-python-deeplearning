@@ -34,8 +34,7 @@ cv2.imwrite('./Results/grayscale_image.jpg', gray_img)
 # image = cv2.imread('p04.jpg')
 
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-#H, S, V = hsv_image[11,75]
-H, S, V = hsv_image
+H, S, V = hsv_image[11,75]
 
 print ('HSV Value', H, S, V)
 print ('hsv_image_shape', image.shape)
