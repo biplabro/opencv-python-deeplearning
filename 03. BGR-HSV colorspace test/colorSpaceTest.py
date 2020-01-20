@@ -60,7 +60,7 @@ cv2.imwrite('./Results/Value channel.jpg', hsv_image[:, :, 2])
 
 B, G, R = cv2.split(image)
 
-#print(B.shape)
+print('Dimension of R channel', R.shape)
 cv2.imshow("Red", R)
 cv2.imshow("Green", G)
 cv2.imshow("Blue", B)
