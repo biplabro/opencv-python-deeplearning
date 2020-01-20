@@ -27,11 +27,16 @@ cv2.imshow('grayscale_image', gray_img)
 cv2.waitKey(0)
 cv2.imwrite('./Results/grayscale_image.jpg', gray_img)
 
+
+########################################################################
 # image manipulation in HSV color space
 # channel H: 0 - 180, S: 0 - 255, V: 0 - 255
 # image = cv2.imread('p04.jpg')
+
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-H, S, V = hsv_image[11,75]
+#H, S, V = hsv_image[11,75]
+H, S, V = hsv_image
+
 print ('HSV Value', H, S, V)
 print ('hsv_image_shape', image.shape)
 
@@ -39,7 +44,8 @@ cv2.imshow('HSV image', hsv_image)
 # hsv_image[length: width: colorspace h, s and v represented by 0, 1 and 2]
 cv2.imshow('Hue channel', hsv_image[:, :, 0])
 cv2.imshow('Saturation channel', hsv_image[:, :, 1])
-cv2.imshow('Value channel', hsv_image[:, :, 2])
+cv2.imshow('Value/ brightness channel', hsv_image[ :, :, 2]) # [ :] stand for all values in the array
+
 
 # wait for keystroke & close all image windows
 cv2.waitKey(0)
@@ -50,7 +56,9 @@ cv2.imwrite('./Results/Hue channel.jpg', hsv_image[:, :, 0])
 cv2.imwrite('./Results/Saturation channel.jpg', hsv_image[:, :, 1])
 cv2.imwrite('./Results/Value channel.jpg', hsv_image[:, :, 2])
 
+########################################################################
 # OpenCV's 'split' function splites the image into each color index
+
 B, G, R = cv2.split(image)
 
 #print(B.shape)
