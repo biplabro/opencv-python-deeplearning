@@ -9,10 +9,10 @@ B -> Blue Channel
 
 G -> Green Channel
 
-R -> Red Channel
+R -> Red Channel`
 
 ## HSV
-hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+`hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 hsv_image[:, :, 0] -> Hue Channel
 
