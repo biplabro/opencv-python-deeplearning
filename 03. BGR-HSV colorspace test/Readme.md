@@ -3,7 +3,7 @@ Either run this python script with sudo privileges or create a folder called "Re
 Splitting color/ property channels
 
 ## BGR
-B, G, R = cv2.split(image)
+`B, G, R = cv2.split(image)
 
 B -> Blue Channel
 
@@ -18,7 +18,7 @@ hsv_image[:, :, 0] -> Hue Channel
 
 hsv_image[:, :, 1] -> Saturation Channel
 
-hsv_image[:, :, 2] -> Value Channel
+hsv_image[:, :, 2] -> Value Channel`
 
 Note: 
 =====
