@@ -101,5 +101,5 @@ cv2.imwrite("./Results/Green-Zero.jpg", cv2.merge([zeros, G, zeros]))
 cv2.imwrite("./Results/Blue-Zero.jpg", cv2.merge([B, zeros, zeros]))
 
 cv2.destroyAllWindows()
-image.shape[:2]
+image.shape[ :2]
 
